@@ -57,6 +57,8 @@ body {
   border-color: black;
 }
 
+
+
 .correct {
   color: green;
 }
@@ -64,4 +66,8 @@ body {
 .incorrect {
   color: red;
   text-decoration: underline;
+}
+
+.js-off {
+  display: none;
 }
