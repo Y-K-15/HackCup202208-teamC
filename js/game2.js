@@ -36,6 +36,7 @@ const typeDisplay = document.getElementById('type-display');
 const typeInput = document.getElementById('type-input');
 const timer = document.getElementById('timer');
 const resultDisplay = document.getElementById('result-display');
+const result = document.getElementById('result');
 const defaultQuestionLength = questions.length;
 let correctCount = 0;
 let sentence;
@@ -121,14 +122,35 @@ function timeUp() {
   }
 }
 
+// 結果を表示
 function showResults() {
   timer.classList.add("js-off");
   typeDisplay.classList.add("js-off");
   typeInput.classList.add("js-off");
 
-  resultDisplay.innerHTML = correctCount + "/" + defaultQuestionLength;
+  result.innerHTML = "結果:" + correctCount + "/" + defaultQuestionLength;
   resultDisplay.classList.remove("js-off");
 }
 
-RenderNextSentence();
+
+// スタートボタンを押してクイズ開始
+const startButton = document.getElementById("start-button");
+
+startButton.addEventListener("click", () => {
+  startButton.classList.add("js-off");
+  timer.classList.remove("js-off");
+  typeDisplay.classList.remove("js-off");
+  typeInput.classList.remove("js-off");
+  typeInput.focus();
+
+  RenderNextSentence();
+});
+
+// リスタートボタン
+const restartButton = document.getElementById("restart-button");
+
+restartButton.addEventListener("click", () => {
+  window.location.reload();
+});
+
 
