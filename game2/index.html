@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>ポセ打</title>
   <link rel="stylesheet" href="../css/rset.css">
   <link rel="stylesheet" href="../css/common.css">
   <link rel="stylesheet" href="../css/game2.css">
@@ -17,6 +17,16 @@
 
   <!-- main----------------------------------------------- -->
   <main class="main">
+    <div class="container">
+      <button class="start-button button" id="start-button">スタート</button>
+      <div class="timer js-off" id="timer"></div>
+      <div class="type-display js-off" id="type-display"></div>
+      <textarea class="type-input js-off" id="type-input" autofocus></textarea>
+      <div class="result-display js-off" id="result-display">
+        <div class="result" id="result"></div>
+        <button class="restart-button button" id="restart-button">やり直す</button>
+      </div>
+    </div>
   </main>
 
   <!-- javascript------------------------------------------ -->
