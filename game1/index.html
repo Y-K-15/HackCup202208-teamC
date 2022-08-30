@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="../css/rset.css">
+  <title>誕生日クイズ | 事前企画 ゲーム1</title>
+  <link rel="stylesheet" href="../css/reset.css">
   <link rel="stylesheet" href="../css/common.css">
   <link rel="stylesheet" href="../css/game1.css">
 </head>
@@ -16,7 +16,65 @@
   </header>
 
   <!-- main----------------------------------------------- -->
-  <main class="main">
+  <main>
+    <section class="calendar">
+      <div class="explanation">
+        <p>日付を選択してください。</p>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th id="before_prev">&lt;&lt;</th>
+            <th id="prev">&lt;</th>
+            <th id="title" colspan="3"></th>
+            <th id="next">&gt;</th>
+            <th id="after_next">&gt;&gt;</th>
+          </tr>
+          <tr>
+            <th>日</th>
+            <th>月</th>
+            <th>火</th>
+            <th>水</th>
+            <th>木</th>
+            <th>金</th>
+            <th>土</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+        <tfoot>
+          <tr>
+            <th id="today" colspan="7">今日の日付に戻る</th>
+          </tr>
+        </tfoot>
+      </table>
+      
+      <div id="next_quiz" class="next">
+        <p>次の日付を選択</p>
+      </div>
+    </section>
+
+    <section class="quiz hide">
+      <div class="question">
+        <!-- <p></p> -->
+        <!-- <p>8月2日が誕生日なのは誰？</p> -->
+      </div>
+      <div class="choices">
+        <ul>
+          <li><button id="choice_0" class="choice choice_0"></button></li>
+          <li><button id="choice_1" class="choice choice_1"></button></li>
+          <li><button id="choice_2" class="choice choice_2"></button></li>
+        </ul>
+      </div>
+      <div class="answer">
+      </div>
+      <picture class="picture">
+      </picture>
+      <!-- <div id="next_quiz" class="next">
+        <p>次の問題 &gt;&gt;</p>
+      </div> -->
+    </section>
   </main>
 
   <!-- javascript------------------------------------------ -->
