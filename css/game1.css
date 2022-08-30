@@ -1,0 +1,278 @@
+/* 視覚整形モデル
+ボックスモデル
+背景
+色
+フォント
+表
+UI
+アニメーション
+その他 */
+
+body {
+  /* font-family: 'Courier New', monospace; */
+  font-family: 'Arial';
+  font-size: 14px;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  height: 50px;
+  background-color: grey;
+  color: white;
+  font-size: 30px;
+}
+
+main {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 80px;
+}
+
+.calendar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* 中心の線 */
+/* #calendar::after {
+	position: absolute;
+	top: 50px;
+	left: 50%;
+	margin: 0 1rem;
+	content: "";
+	width: 1px;
+	height: 100%;
+	background-color: grey;
+} */
+
+.explanation {
+  text-align: center;
+  margin: 10px;
+  font-size: 20px;
+}
+
+/* カレンダー */
+table {
+  width: 500px;
+  height: 500px;
+  border-collapse: collapse;
+  border: 2px solid black;
+  font-size: 25px;
+}
+
+thead,
+tfoot {
+  background: linen;
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: center;
+  border: 1px solid grey;
+}
+
+td {
+    vertical-align: middle;
+}
+
+tbody td:first-child {
+  color: red;
+}
+
+tbody td:last-child {
+  color: blue;
+}
+
+tfoot {
+  font-weight: bold;
+}
+
+td.disabled {
+  opacity: 0.4;
+}
+
+td.today {
+  font-weight: bold;
+}
+
+td.birthday {
+  background-color: orange;
+  cursor: pointer;
+  user-select: none;
+}
+
+td.birthday.selected {
+  padding: 5px;
+  border: 5px solid green;
+  /* background-color: grey; */
+  background-color: rgba(0, 0, 255, 0.1);
+}
+
+#before_prev,
+#prev,
+#next,
+#after_next,
+#today {
+  cursor: pointer;
+  user-select: none;
+}
+
+.next {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 50px;
+  margin: 40px auto 0;
+  border: 1px solid red;
+  border-radius: 10px;
+  background-color: red;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.next:hover {
+  background-color: white;
+  color: red;
+}
+
+/* カレンダー */
+
+/* クイズ */
+.quiz {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.quiz.hide {
+  /* display: none; */
+  background-color: white;
+}
+
+.quiz.hide .question {
+  display: none;
+}
+
+.quiz.hide .choices {
+  display: none;
+}
+
+.question {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: grey;
+  color: white;
+  font-size: 30px;
+}
+
+.choices {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+.choices ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.choice {
+  width: 500px;
+  height: 50px;
+  margin: 10px 0;
+  border: 1px solid orange;
+  border-radius: 10px;
+  background-color: orange;
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.choice:hover {
+  background-color: white;
+  color: orange;
+}
+
+.choice.disabled {
+  border: none;
+  background-color: grey;
+  cursor: auto;
+}
+
+.choice.disabled:hover {
+  color: white;
+}
+
+.choice.correct {
+  background-color: lightgreen;
+}
+
+.choice.incorrect {
+  background-color: tomato;
+}
+
+.choice.correct::after {
+  content: ' ...正解';
+}
+
+.choice.incorrect::after {
+  content: ' ...不正解';
+}
+
+.answer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  height: 100px;
+  border-radius: 10px;
+  background-color: white;
+  color: white;
+  font-size: 30px;
+  text-align: center;
+}
+
+.answer.correct {
+  background-color: lightgreen;
+}
+
+.answer.incorrect {
+  /* background-color: lightcoral; */
+  background-color: tomato;
+}
+
+.picture {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.picture_img {
+  display: none;
+  max-width: 500px;
+  max-height: 500px;
+  border-radius: 10px;
+}
+
+.picture_img.answered {
+  display: flex;
+}
+
+/* クイズ */
