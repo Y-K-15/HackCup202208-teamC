@@ -1,11 +1,9 @@
-* {
-  box-sizing: border-box;
-}
-
-body {
-  height: 100vh;
+.main {
+  padding: 4rem 0;
+  width: 100%;
+  /* height: 100vh; */
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   justify-content: center;
   overflow: hidden;
   background: linear-gradient(
@@ -15,15 +13,10 @@ body {
   );
 }
 
-.main {
-  padding: 4rem;
-  width: 100%;
-}
-
 .container {
   display: flex;
   gap: 1rem;
-  margin: 0 auto;
+  /* margin: 0 auto; */
   padding: 2rem;
   max-width: 1000px;
   min-height: 500px;
@@ -59,8 +52,6 @@ body {
 
 .type-display {
   width: 100%;
-  /* margin-bottom: 1rem;
-  margin-left: 1rem; */
 }
 
 .type-display span {

@@ -3,16 +3,16 @@ header {
   height: 50px;
   box-sizing: border-box;
   /* padding: 20px,40px; */
-  right: 0;
+  /* right: 0;
   left: 0;
-  top: 0;
+  top: 0; */
 }
 
 .header-inner {
   position: relative;
   height: 50px;
+  width: 100%;
   display: flex;
-
 }
 
 .content-before {
@@ -21,7 +21,6 @@ header {
   top: 0;
   right: 100%;
 }
-
 
 .js-hamburger-content {
   width: 100vw;
@@ -34,26 +33,26 @@ header {
   left: 0;
   margin-top: 68px;
   opacity: 0;
-  animation: fadein-anim 1.0s linear forwards;
+  animation: fadein-anim 1s linear forwards;
 }
-@keyframes fadein-anim{
-  100%{
+@keyframes fadein-anim {
+  100% {
     opacity: 1;
   }
 }
 
-.content-item{
+.content-item {
   list-style: none;
   border: none;
   margin-top: 100px;
 }
-.content-items{
+.content-items {
   color: white;
   margin-left: 630px;
- text-decoration: none;
- font-size: 30px;
- font-weight: 700;
- font-family: 'Nikukyu';
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: 700;
+  font-family: "Nikukyu";
 }
 
 .hamburger {
@@ -93,36 +92,35 @@ header {
   margin-left: 10px;
 }
 
-.team-img{
+.team-img {
   width: 500px;
   height: 200px;
   position: absolute;
   top: 0;
   left: 0;
   opacity: 0;
- animation: fadein 3s step-start forwards;
+  animation: fadein 3s step-start forwards;
 }
-@keyframes fadein{
-  0%{
+@keyframes fadein {
+  0% {
     opacity: 0;
   }
-  100%{
+  100% {
     opacity: 1;
   }
 }
 
-.game-img-one{
+.game-img-one {
   width: 700px;
   height: 300px;
   position: absolute;
-  top: 50;
+  top: 50px;
   right: 0;
 }
-.game-img-two{
+.game-img-two {
   width: 700px;
   height: 300px;
   position: absolute;
-  top: 75;
+  top: 75px;
   left: 0;
 }
-
